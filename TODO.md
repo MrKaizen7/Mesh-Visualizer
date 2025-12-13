@@ -1,13 +1,13 @@
 # Project Roadmap & Enhancements
 
 ## 🎨 Visual & UX Overhaul
-- [ ] **1. Theme Overhaul (Metallic/Industrial)**
+- [x] **1. Theme Overhaul (Metallic/Industrial)**
     - Replace the current "blue/indigo" palette with a "Metallic Black, Grey, White" aesthetic.
     - Goal: A cleaner, professional, "Cooler" look suitable for portfolio showcasing.
 - [ ] **2. Environment & Studio Lighting (HDRI)**
     - Implement Image-Based Lighting (IBL) using `<Environment />`.
     - Allow switching between Studio, City, and Outdoor lighting.
-- [ ] **3. Persistent Repo History**
+- [x] **3. Persistent Repo History**
     - Automatically save entered repository links to local storage.
     - Create a "Quick Load" sidebar for favorites (e.g., `MrKaizen7/meshes`).
 - [ ] **4. Deep Linking & State Sharing**

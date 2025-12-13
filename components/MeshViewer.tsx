@@ -31,7 +31,7 @@ declare module 'react' {
 
 const Loader: React.FC = () => {
   const { progress } = useProgress();
-  return <Html center className="text-white text-lg font-mono tracking-wider">{progress.toFixed(0)}% LOADED</Html>;
+  return <Html center className="text-zinc-400 text-xs font-mono tracking-widest">{progress.toFixed(0)}% LOADED</Html>;
 }
 
 // UI Overlay for Camera Control
@@ -57,25 +57,25 @@ const CameraTools: React.FC = () => {
             <div className="absolute bottom-6 right-6 flex flex-col gap-2 pointer-events-auto">
                 <button 
                     onClick={() => handleZoom(0.6)} 
-                    className="p-3 bg-gray-800/90 text-white rounded-lg hover:bg-indigo-600 transition-colors shadow-lg border border-gray-700 group"
+                    className="p-3 bg-zinc-900/90 text-zinc-300 rounded-lg hover:bg-white hover:text-black transition-all shadow-lg border border-zinc-700 hover:border-white group"
                     title="Zoom In"
                 >
-                    <ZoomInIcon className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                    <ZoomInIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 </button>
                 <button 
                     onClick={() => handleZoom(1.5)} 
-                    className="p-3 bg-gray-800/90 text-white rounded-lg hover:bg-indigo-600 transition-colors shadow-lg border border-gray-700 group"
+                    className="p-3 bg-zinc-900/90 text-zinc-300 rounded-lg hover:bg-white hover:text-black transition-all shadow-lg border border-zinc-700 hover:border-white group"
                     title="Zoom Out"
                 >
-                    <ZoomOutIcon className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                    <ZoomOutIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 </button>
-                <div className="h-px bg-gray-600 my-1 mx-2"></div>
+                <div className="h-px bg-zinc-800 my-1 mx-2"></div>
                  <button 
                     onClick={handleReset} 
-                    className="p-3 bg-gray-800/90 text-white rounded-lg hover:bg-indigo-600 transition-colors shadow-lg border border-gray-700 group"
+                    className="p-3 bg-zinc-900/90 text-zinc-300 rounded-lg hover:bg-white hover:text-black transition-all shadow-lg border border-zinc-700 hover:border-white group"
                     title="Reset View"
                 >
-                    <RefreshCwIcon className="w-6 h-6 group-hover:rotate-180 transition-transform duration-500" />
+                    <RefreshCwIcon className="w-5 h-5 group-hover:rotate-180 transition-transform duration-500" />
                 </button>
             </div>
         </Html>
@@ -144,7 +144,9 @@ const MeshViewer: React.FC<MeshViewerProps> = ({ url }) => {
         gl={{ antialias: true, logarithmicDepthBuffer: true }}
         dpr={[1, 2]}
     >
-        <color attach="background" args={['#111827']} />
+        {/* Updated Background Color to Zinc-950 hex equivalent */}
+        <color attach="background" args={['#09090b']} />
+        
         <ambientLight intensity={1.5} />
         <directionalLight 
             ref={lightRef}
@@ -167,7 +169,7 @@ const MeshViewer: React.FC<MeshViewerProps> = ({ url }) => {
             cellThickness={0.6}
             sectionSize={3.3}
             sectionThickness={1.5}
-            sectionColor={new THREE.Color(0x3f3f46)}
+            sectionColor={new THREE.Color(0x52525b)} // zinc-600
             fadeDistance={40}
             fadeStrength={1}
         />
